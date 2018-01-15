@@ -1,0 +1,395 @@
+<!doctype html>
+<!-- vim:ts=4 expandtab 
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="author" content="Davide Bologna">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <style>
+            .frame {
+                padding: 0 10px 0 10px;
+            }
+            .left-floating-image {
+                float: left;
+                width: 266px;
+                height: 200px;
+                position: relative;
+                margin: 20px !important;
+            }
+            .left-floating-image .comment {
+                margin-right: 20px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 30px;
+            }
+            .bbc-micro-front {
+                height: 600px;
+                background-image: url('cache/Wikipedia_BBC_Micro_Front_Restored.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .bbc-micro-rear {
+                height: 600px;
+                background-image: url('cache/Wikipedia_BBC_Micro_rear.jpeg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .bbc-micro-rear p.fragment.curtain {
+                padding: 20px;
+            }
+            .rpi-3 {
+                height: 600px;
+                background-image: url('cache/1200px-Raspberry-Pi-3-Flat-Top.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .rpi-zero {
+                height: 600px;
+                background-image: url('cache/Raspberry-Pi-Zero-FL.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .fragment.curtain {
+                padding: 10px;
+                margin: 20px 60px;
+                color: rgb(66, 75, 150);
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+        </style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                <section>
+                    <h1>Dinosauri, ghiande e lamponi</h1>
+                    <p>Programmare è ancora divertente come nel 1980?</p>
+                    <p>Perché usare un Raspberry Pi per imparare a programmare?</p>
+                </section>
+
+                <section>
+                    <h2>Preistoria</h2>
+                    <p>Parte 1</p>
+                </section>
+
+                <section>
+                    <h2>Federico Faggin</h2>
+                    <p class="fragment">Intel 4004</p>
+                    <p class="fragment">Intel 8080</p>
+                </section>
+
+                <section>
+                    <h2>Chuck Peddle</h2>
+                    <p class="fragment">Motorola 6800</p>
+                    <p class="fragment">MOS 6502</p>
+                </section>
+
+                <section>
+                    <h2>Home computer in Europa</h2>
+                    <p>Apple. Apple II</p>
+                    <p>Commodore. PET, VIC20 e C64</p>
+                    <p>Sinclair. ZX80, ZX81 e Spectrum</p>
+                    <p>I computer diventano accessibili a tutti</p>
+                </section>
+
+                <section>
+                    <h2>Capacità di un home computer a 8 bit</h2>
+                    <p>
+                        <span class="fragment">Megahertz. Da 1 a 4.</span>
+                        <span class="fragment current-visible right-meme">Wow</span>
+                    </p>
+                    <p>
+                        <span class="fragment">Memoria. Da 4 a 64K.</span>
+                        <span class="fragment">Forse 128K.</span>
+                        <span class="fragment current-visible right-meme">Woow</span>
+                    </p>
+                    <p>
+                        <span class="fragment">Risoluzione.</span>
+                        <span class="fragment">320x200 con 16 colori.</span>
+                        <span class="fragment current-visible right-meme">Very woow</span>
+                        <!--<span class="fragment current-visible right-meme" style="transform: rotate(90deg); display: inline-block; float: right; ">8O</span>-->
+                    </p>
+                    <p class="fragment">Generalmente si potevano collegare dispositivi esterni</p>
+                    <p class="fragment">Probabilmente la chiave della vostra auto è più potente...</p>
+                </section>
+
+                <section>
+                    <h2>Come si programmava?</h2>
+                    <p class="fragment">Interprete BASIC integrato per imparare a programmare</p>
+                    <p class="fragment">Assembler per applicazioni più complesse</p>
+                    <p class="fragment">Il programmatore lavorava in modo creativo per sfruttare al massimo le capacità dell'hardware</p>
+                </section>
+
+                <section>
+                    <h2>Software</h2>
+                    <p class="fragment">Quando gli home computer appaiono sul mercato, esiste poco software</p>
+                    <p class="fragment">Tante cose si imparano su riviste e cassette</p>
+                    <p class="fragment">Dietro un'applicazione spesso c'era un singolo programmatore</p>
+                    <p class="fragment">Una persona poteva scrivere un software innovativo o eccezionale</p>
+                </section>
+
+                <section>
+                    <h2>Software</h2>
+                    <p class="fragment">Visicalc per Apple II -> Excel</p>
+                    <div class="fragment frame">
+                        <div class="left-floating-image" style="background-image: url('cache/Thumb_Pac-Man_-_1983_-_Atari.jpg');">
+                            <!-- http://www.gamesdatabase.org/media/commodore-64/artwork-in-game/pac-man -->
+                            <span class="comment"> Pacman, 1983 </span>
+                        </div>
+                    </div>
+                    <div class="fragment frame">
+                        <div class="left-floating-image" style="background-image: url('cache/Thumb_Mario_Bros._-_1984_-_Atari.jpg');">
+                            <!-- http://www.gamesdatabase.org/media/commodore-64/artwork-in-game/mario-bros- -->
+                            <span class="comment"> Mario Bros, 1984 </span>
+                        </div>
+                    </div>
+                    <div class="fragment frame">
+                        <div class="left-floating-image" style="background-image: url('cache/Thumb_Ghosts-n_Goblins_-_1986_-_Elite_Systems_Ltd..jpg');">
+                            <!--http://www.gamesdatabase.org/media/commodore-64/artwork-in-game/ghostsn-goblins-->
+                            <span class="comment"> Ghost 'n Goblins, 1986 </span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Mattoni</h2>
+                    <p>Parte seconda</p>
+                </section>
+
+                <section>
+                    <h2>Diffondere la conoscenza digitale</h2>
+                    <p class="fragment">In Inghilterra, la BBC promuove un programma educativo per la diffusione della conoscenza informatica</p>
+                    <p class="fragment">Acorn viene incaricata di sviluppare un computer adatto</p>
+                    <p class="fragment">1981. Nasce il BBC Micro</p>
+                </section>
+
+                <section>
+                    <h2>Caratteristiche</h2>
+                    <div class="bbc-micro-front">
+                        <p class="fragment curtain">
+                            6502@2MHz, 16/32K RAM, 640x256,
+                            <br>
+                            16 colori, tape, floppy
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Porte</h2>
+                    <div class="bbc-micro-rear">
+                        <br>
+                        <p class="fragment curtain">
+                            The machine included a number of extra input/output interfaces: serial and parallel printer ports; an 8-bit general purpose digital I/O port; a port offering four analogue inputs, a light pen input, and switch inputs; and an expansion connector (the "1 MHz bus") that enabled other hardware to be connected
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Esito del progetto</h2>
+                    <p class="fragment">L'iniziativa ha successo, anche fuori dall'Inghilterra</p>
+                    <p class="fragment">Il BBC Micro vende 1.5M unità</p>
+                    <p class="fragment">1985. Acorn comincia a lavorare a una nuova macchina a scopi educativi</p>
+                </section>
+
+                <section>
+                    <h2>Acorn RISC Machine e Archimedes</h2>
+                    <p class="fragment">Acorn progetta una propria CPU RISC. Piccola, potente, costa e consuma poco</p>
+                    <p class="fragment">1987. Arriva Archimedes, il computer con ARM</p>
+                    <p class="fragment">
+                        Il mercato è già saturo.
+                        Hardware e OS proprietari limitano gli investimenti per lo sviluppo di software.
+                        Nel giro di pochi anni Archimedes scompare dalla scena
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Advanced RISC Machine</h2>
+                    <p class="fragment">La CPU ha qualità notevoli e altri ambiti di utilizzo</p>
+                    <p class="fragment">Spinoff di ARM come azienda per promuovere la CPU</p>
+                    <p class="fragment">Nel 1994 viene presentato il primo SoC. ARM250 integra logica, memoria e IO in un'unico chip</p>
+                    <p class="fragment">ARM non costruisce e vende le sue CPU. Piuttosto concede in licenza i suoi progetti e fornisce consulenza per realizzazione di soluzioni custom</p>
+                </section>
+
+                <section>
+                    <h2>Smartphone</h2>
+                    <p class="fragment">Apple usa ARM in iPod e poi in iPhone</p>
+                    <p class="fragment">Praticamente tutti gli smartphone hanno una CPU ARM, sono miliardi</p>
+                    <p class="fragment">Il boom degli smartphone consente lo sviluppo di tantissimi sensori economici </p>
+                </section>
+
+                <section>
+                    <h2>Programmare nel 2010</h2>
+                    <p class="fragment">Linguaggi più potenti hanno reso la programmazione più astratta</p>
+                    <p class="fragment">Tanti problemi si risolvono banalmente utilizzando librerie già disponibili</p>
+                    <p class="fragment">La vita da hacker è sicuramente migliorata ma si è persa la consapevolezza di cosa succede "dentro"</p>
+                    <p class="fragment">La progressiva scomparsa di piattaforme alternative ha portato a una standardizzazione sul PC che ormai non ha più porte per intefacciare a "basso livello"</p>
+                </section>
+
+                <section>
+                    <h2>Ghiande e lamponi</h2>
+                    <p class="fragment">2012</p>
+                    <p class="fragment">Siamo sopravvisuti alla profezia Maya</p>
+                    <p class="fragment">Il Raspberry Pi Model B viene immesso sul mercato: è un successi istantaneo</p>
+                    <p class="fragment">I modelli più interessanti al momento sono RPi 3 e RPi Zero/Zero W</p>
+                </section>
+
+                <section>
+                    <h2>Caratteristiche generali</h2>
+                    <p class="fragment">&Egrave; un computer a tutti gli effetti</p>
+                    <p class="fragment">General Purpose Input Output</p>
+                    <p class="fragment">Raspbian è l'OS standard, altri sono disponibili</p>
+                    <p class="fragment">Tanta documentazione e add-on hardware specifici</p>
+                </section>
+
+                <section>
+                    <h2>Raspberry Pi 3 Model B</h2>
+                    <div class="rpi-3">
+                        <p class="fragment curtain">Quad Core 1.2GHz Broadcom BCM2837 64bit CPU/GPU with 1GB RAM</p>
+                        <p class="fragment curtain">Ethernet, wireless LAN and Bluetooth Low Energy</p>
+                        <p class="fragment curtain">40-pin extended GPIO</p>
+                        <p class="fragment curtain">4 USB 2 ports</p>
+                        <p class="fragment curtain">Full size HDMI, camera & display interfaces</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Raspberry Pi Zero</h2>
+                    <div class="rpi-zero">
+                        <p class="fragment curtain">1GHz single-core CPU, 512MB RAM</p>
+                        <p class="fragment curtain">Mini HDMI port, 2 Micro USB (power + OTG)</p>
+                        <p class="fragment curtain">HAT-compatible 40-pin header</p>
+                        <p class="fragment curtain">Composite video and reset headers</p>
+                        <p class="fragment curtain">CSI camera connector</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Progetti di esempio (da cercare)</h2>
+Fonti: RPi Foundation, RPiMag
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                </section>
+
+                <section>
+                    <h2>Perché scegliere RPi per imparare</h2>
+                    <p class="fragment">Economico (5 - 35$)</p>
+                    <p class="fragment">Documentazione e tutorial di ottima qualità</p>
+                    <p class="fragment">Hardware specifico e after market</p>
+                    <p class="fragment">&Egrave; facile trovare aiuto</p>
+                </section>
+
+                <section>
+                    <h2>Re-imparare a programmare</h2>
+- Reference a materiale educativo
+- Risorse in italiano
+- Scratch
+- Linux e gcc
+- Open source
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                </section>
+
+                <section>
+                    <h2></h2>
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                </section>
+
+                <section>
+                    <h2></h2>
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                </section>
+
+                <section>
+                    <h2>Credits</h2>
+                    Immagini di pubblico dominio
+                    <div>
+                        <a href="https://commons.wikimedia.org/w/index.php?curid=56262833">
+                            RPi 3 by Evan-Amos - Own work, Public Domain
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://commons.wikimedia.org/w/index.php?curid=56262753">
+                            RPi Zero by Evan-Amos - Own work, Public Domain
+                        </a>
+                    </div>
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                    <p class="fragment"></p>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
